@@ -20,8 +20,6 @@ gem 'currency_select'
 
 gem 'devise'
 
-# gem 'bootstrap-datepicker-rails'
-
 gem 'dotenv-rails'
 
 gem 'cocoon'

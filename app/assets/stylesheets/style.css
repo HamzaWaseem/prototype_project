@@ -1,0 +1,10 @@
+.navbar {
+    border-radius: 0!important;
+    margin: inherit;
+}
+.input-field {
+    width: 250px!important;
+}
+span, label {
+    margin-right: 10px;
+}

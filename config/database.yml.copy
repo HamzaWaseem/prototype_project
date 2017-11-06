@@ -1,0 +1,13 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: <%= ENV['DIP_DB_NAME_' + ENV['DIP_MODE']]%>
+  username: <%= ENV['DIP_DB_USERNAME_' + ENV['DIP_MODE']]%>
+  password: <%= ENV['DIP_DB_PASSWORD_' + ENV['DIP_MODE']]%>
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: <%= ENV['DIP_DB_NAME_' + ENV['DIP_MODE']]%>
+  username: <%= ENV['DIP_DB_USERNAME_' + ENV['DIP_MODE']]%>
+  password: <%= ENV['DIP_DB_PASSWORD_' + ENV['DIP_MODE']]%>

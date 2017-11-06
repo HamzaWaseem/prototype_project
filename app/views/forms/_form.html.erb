@@ -1,0 +1,19 @@
+<%= simple_form_for(@form) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :department, :input_html => { :class => 'input-field' } %>
+    <%= f.collection_radio_buttons :category, [['Lead', 'Lead'] ,['Non-Lead', 'Non-Lead']],:first, :last %>
+    <%= f.input :date_started, :as => :string, :input_html => { :class => 'datepicker input-field' } %>
+    <%= f.input :date_completed, :as => :string, :input_html => { :class => 'datepicker input-field' } %>
+    <%= f.input :summary, :input_html => { :class => 'input-field' } %>
+    <%= f.input :user_id,:as => :hidden, :input_html => { :class => 'input-field', :value => current_user.id } %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-primary' %>
+  </div>
+<% end %>
+<script>
+        $('.datepicker').datepicker();
+</script>

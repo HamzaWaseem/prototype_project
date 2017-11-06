@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Prototype</title>
+
+  <!-- Bootstrap core CSS -->
+  <%= stylesheet_link_tag 'application', media: 'screen' %>
+  <%= javascript_include_tag 'application' %>
+
+  <%#= stylesheet_link_tag 'style', media: 'print, screen' %>
+  <%#= stylesheet_link_tag 'datatables', media: 'print, screen' %>
+</head>
+<body style="background-color: #fff">
+  <div class="container-fluid">
+    <div class="row">
+        <!-- Navigation start -->
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header" style="background-color: black">
+              <%= link_to 'Prototype',root_path, class: 'navbar-brand'  %>
+            </div>
+            <ul class="nav navbar-nav pull-right">
+              <li class="active"><a href="#">Home</a></li>
+              <% if user_signed_in? %>
+                <li><%= link_to current_user.full_name,users_path  %></li>
+              <% else %>
+                <li><%= link_to 'Login / Signup',users_path  %></li>
+            <% end %>
+            </ul>
+          </div>
+        </nav>
+        <!-- Navigation End! -->
+    </div>
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+
+              <h1>Forms</h1>
+
+              <table class="table table-striped data-list" id="example">
+                <thead>
+                <tr>
+                  <th>Department</th>
+                  <th>Category</th>
+                  <th>Date started</th>
+                  <th>Date completed</th>
+                  <th>Summary</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <% @forms.each do |form| %>
+                    <tr>
+                      <td><%= form.department %></td>
+                      <td><%= form.category %></td>
+                      <td><%= form.date_started %></td>
+                      <td><%= form.date_completed %></td>
+                      <td><%= form.summary %></td>
+                    </tr>
+                <% end %>
+                </tbody>
+              </table>
+            </div>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

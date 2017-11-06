@@ -1,0 +1,10 @@
+server '23.92.19.41', user: 'live', roles: %w{app db web}
+
+set :application, 'DailyInpatient'
+
+set :deploy_to, '/home/live/DailyInpatient'
+
+set :repo_url, 'git@gitrepos.com:rubyonrails/DailyInpatient.git'
+
+
+set :tmp_dir, '/home/live/tmp'

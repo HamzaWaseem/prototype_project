@@ -60,6 +60,6 @@ class FormsController < ApplicationController
     end
 
     def form_params
-      params.require(:form).permit(:department, :category, :date_started, :date_completed, :summary, :user_id)
+      params.require(:form).permit(:department, :category, :date_started, :date_completed, :summary, :impact, :is_applicable_to_other_areas, :user_id)
     end
 end

@@ -7,7 +7,7 @@ class Devise::RegistrationsController < DeviseController
   def create
     @user = User.new(user_params)
     if @user.save
-      @user.add_role(AppConstants::CUSTOMER)
+      @user.add_role(AppConstants::USER)
       redirect_to users_path
     end
   end

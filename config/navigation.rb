@@ -6,7 +6,7 @@ SimpleNavigation::Configuration.run do |navigation|
       primary.item :users, content_tag(:i, "", :class => "fa fa-users") + "Users", users_path, :highlights_on => /\/users/
       primary.item :forms, content_tag(:i, "", :class => "fa fa-wpforms") + "Forms", forms_path, :highlights_on => /\/forms/
 
-    elsif @current_user_role == AppConstants::CUSTOMER
+    elsif @current_user_role == AppConstants::USER || @current_user_role == AppConstants::TEAM_LEADER || @current_user_role == AppConstants::SPECIALIST
       primary.item :forms, content_tag(:i, "", :class => "fa fa-wpforms") + "Forms", forms_path, :highlights_on => /\/forms/
     end
 

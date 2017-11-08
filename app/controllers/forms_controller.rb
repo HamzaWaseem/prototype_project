@@ -1,12 +1,9 @@
 class FormsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_form, only: [:show, :edit, :update, :destroy]
 
   def index
-    if @current_user_role == AppConstants::ADMIN
       @forms = Form.all
-    else
-      @forms = Form.where(user_id: current_user.id)
-    end
   end
 
   def show

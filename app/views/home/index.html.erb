@@ -35,9 +35,8 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
               <ul class="nav navbar-nav pull-right">
-                <li class="active"><a href="#">Home</a></li>
                 <% if user_signed_in? %>
-                  <li><%= link_to current_user.full_name,users_path  %></li>
+                  <li><%= link_to current_user.full_name,forms_path  %></li>
                 <% else %>
                   <li><%= link_to 'Login / Signup',users_path  %></li>
               <% end %>

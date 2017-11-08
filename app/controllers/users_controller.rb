@@ -14,12 +14,17 @@ class UsersController < ApplicationController
   end
 
   def edit
+    # binding.pry
   end
 
   def update
     # binding.pry
-      if @user.update(user_params)
-        redirect_to users_path
+      if @user.update(update_user_params)
+        user = @user
+        role = user.roles.last.name
+        user.remove_role role
+        user.add_role(params[:user][:roles_name])
+        redirect_to forms_path
       end
   end
 
@@ -40,6 +45,6 @@ class UsersController < ApplicationController
   end
   
   def update_user_params
-    params.require(:user).permit(:first_name, :last_name, :phone, :email, :password, :password_confirmation, :username)
+    params.require(:user).permit(:first_name, :last_name, :phone, :email, :password, :password_confirmation, :username, :role_name)
   end
 end

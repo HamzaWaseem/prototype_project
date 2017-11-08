@@ -9,3 +9,6 @@
 span, label {
     margin-right: 10px;
 }
+table {
+    width: 100%!important;
+}

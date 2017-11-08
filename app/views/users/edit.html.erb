@@ -7,6 +7,10 @@
       <%= f.input :first_name, required: true %>
       <%= f.input :last_name, required: true %>
       <%= f.input :username, required: true %>
+      <% if @current_user_role == AppConstants::ADMIN %>
+          <%= f.input :roles_name, priority: [ User.find(params[:id]).roles.last.name ], include_blank: false, collection: [AppConstants::TEAM_LEADER, AppConstants::SPECIALIST, AppConstants::USER ], input_html: {multiple: false} %>
+          <%#= f.association :roles, include_blank: false, input_html: {multiple: false} %>
+      <% end %>
       <%= f.input :phone, required: true %>
       <%= f.input :email, required: true, autofocus: true %>
       <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>

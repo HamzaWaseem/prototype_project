@@ -6,11 +6,7 @@ class UsersController < ApplicationController
   # load_and_authorize_resource
 
   def index
-    if @current_user_role == AppConstants::ADMIN
-      @users = User.where.not(id: current_user)
-    else
-      @users = User.where(id: current_user.id)
-    end
+      @users = User.all
   end
 
   def edit

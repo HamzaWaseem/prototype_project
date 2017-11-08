@@ -26,16 +26,23 @@
         <nav class="navbar navbar-inverse">
           <div class="container-fluid">
             <div class="navbar-header" style="background-color: black">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
               <%= link_to 'Prototype',root_path, class: 'navbar-brand'  %>
             </div>
-            <ul class="nav navbar-nav pull-right">
-              <li class="active"><a href="#">Home</a></li>
-              <% if user_signed_in? %>
-                <li><%= link_to current_user.full_name,users_path  %></li>
-              <% else %>
-                <li><%= link_to 'Login / Signup',users_path  %></li>
-            <% end %>
-            </ul>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav pull-right">
+                <li class="active"><a href="#">Home</a></li>
+                <% if user_signed_in? %>
+                  <li><%= link_to current_user.full_name,users_path  %></li>
+                <% else %>
+                  <li><%= link_to 'Login / Signup',users_path  %></li>
+              <% end %>
+              </ul>
+            </div>
           </div>
         </nav>
         <!-- Navigation End! -->
@@ -47,7 +54,7 @@
 
               <h1>Forms</h1>
 
-              <table class="table table-striped data-list" id="example">
+              <table class="table table-responsive" id="example">
                 <thead>
                 <tr>
                   <th>Department</th>

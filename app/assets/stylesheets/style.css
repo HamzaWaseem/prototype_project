@@ -23,6 +23,76 @@ table th {
 tr td {
     text-align: center!important;
 }
+.spacing-bottom {
+    margin-bottom: 30px;
+}
+.tiles {
+    background-color: #bcbcbc;
+    color: #ffffff;
+    position: relative;
+}
+.tiles .tiles-body {
+    padding: 19px 18px 15px 24px;
+}
+.tiles.added-margin {
+    margin-right: -10px;
+}
+
+.tiles .heading {
+    font-size: 15px;
+    display: block;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    margin: 4px 0px;
+}
+
+.tiles.red {
+    background-color: #f35958;
+}
+
+.tiles.blue {
+    background-color: #0090d9;
+}
+
+.href-heading_size{
+    color: white !important;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+
+
+/*.dash_div {*/
+    /*width: 200px;*/
+    /*height: 150px;*/
+    /*margin-left: 10px;*/
+    /*background: #b92c28;*/
+    /*color: #fff;*/
+/*}*/
+/*.dash_div1 {*/
+    /*width: 200px;*/
+    /*height: 150px;*/
+    /*margin-left: 10px;*/
+    /*!*margin-top: 10px;*!*/
+    /*background: rosybrown;*/
+    /*color: #fff;*/
+/*}*/
+
+/*.data h2 {*/
+    /*padding-top: 12px;*/
+    /*padding-left: 25px;*/
+    /*font-size: 35px;*/
+    /*float: left;*/
+/*}*/
+
+/*.data h1 {*/
+    /*!*padding-top: 90px;*!*/
+    /*padding-left: 25px;*/
+    /*padding-right: 30px;*/
+    /*font-size: 35px;*/
+    /*float: right;*/
+/*}*/
+
 
 /*table {*/
     /*width: 100%;*/

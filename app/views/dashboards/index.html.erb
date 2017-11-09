@@ -1,0 +1,14 @@
+<div class="x_panel">
+  <div class="x_title">
+    <h2>Dashboard</h2>
+    <div class="clearfix"></div>
+  </div>
+  <div class="x_content">
+    <div id="container">
+          <div class="row 2col">
+            <%= render 'report_block', block_color: 'blue', title: 'Forms', title_1: 'Tot. forms', count_1: @forms_count %>
+            <%= render 'report_block1', block_color: 'red', title: 'Users', title_1: 'Tot. users', count_1: @users_count %>
+          </div>
+    </div>
+  </div>
+</div>

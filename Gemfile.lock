@@ -336,6 +336,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actionmailer
   activerecord-import
   annotate
   api-auth (~> 2.0)

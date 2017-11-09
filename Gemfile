@@ -42,6 +42,8 @@ gem 'listen'
 
 gem 'multicable'
 
+gem 'actionmailer'
+
 gem 'pg'
 
 gem 'puma', '~> 3.0'

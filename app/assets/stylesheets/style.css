@@ -12,3 +12,10 @@ span, label {
 table {
     width: 100%!important;
 }
+table th {
+    text-align: center!important;
+}
+
+tr td {
+    text-align: center!important;
+}

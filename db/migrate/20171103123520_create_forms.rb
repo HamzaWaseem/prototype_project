@@ -3,9 +3,14 @@ class CreateForms < ActiveRecord::Migration[5.0]
     create_table :forms do |t|
       t.string :department
       t.string :category
-      t.date :date_started
-      t.date :date_completed
-      t.text :summary
+      t.string :date_started
+      t.string :date_completed
+      t.text :summary_of_problem
+      t.string :impact
+      t.string :applicable_to_other_areas
+      t.string :solution_applied
+      t.string :category_level
+      t.integer :user_id
 
       t.timestamps
     end

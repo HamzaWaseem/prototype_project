@@ -13,11 +13,7 @@
 //= require jquery2
 //= require jquery_ujs
 //= require bootstrap
+//= require bootstrap-datepicker
 //= require main
 //= require plugins/smartresize/smartresize
 //= require jquery.dataTables
-//= require bootstrap-datepicker
-
-
-
-

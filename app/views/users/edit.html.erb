@@ -8,7 +8,9 @@
       <%= f.input :last_name, required: true %>
       <%= f.input :username, required: true %>
       <% if @current_user_role == AppConstants::ADMIN %>
-          <%= f.input :roles_name, priority: [ User.find(params[:id]).roles.last.name ], include_blank: false, collection: [AppConstants::TEAM_LEADER, AppConstants::SPECIALIST, AppConstants::USER ], input_html: {multiple: false} %>
+          <% if @user != current_user %>
+            <%= f.input :roles_name, priority: [ User.find(params[:id]).roles.last.name ], include_blank: false, collection: [AppConstants::TEAM_LEADER, AppConstants::SPECIALIST, AppConstants::USER ], input_html: {multiple: false} %>
+          <% end %>
           <%#= f.association :roles, include_blank: false, input_html: {multiple: false} %>
       <% end %>
       <%= f.input :phone, required: true %>

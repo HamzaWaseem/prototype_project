@@ -19,6 +19,7 @@ class FormsController < ApplicationController
   end
 
   def create
+    # binding.pry
     @form = Form.new(form_params)
 
     respond_to do |format|
@@ -59,6 +60,6 @@ class FormsController < ApplicationController
     end
 
     def form_params
-      params.require(:form).permit(:department, :category, :date_started, :date_completed, :summary, :impact, :is_applicable_to_other_areas, :user_id)
+      params.require(:form).permit(:department, :category, :date_started, :date_completed,  :summary_of_problem, :impact, :applicable_to_other_areas, :user_id, :solution_applied, :category_level)
     end
 end

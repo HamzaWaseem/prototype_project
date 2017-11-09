@@ -14,8 +14,12 @@
         <th>Category</th>
         <th>Date started</th>
         <th>Date completed</th>
-        <th>Summary</th>
-        <th> Actions</th>
+        <th>Summary of Problem</th>
+        <th>Impact</th>
+        <th>Applicable to Other Areas</th>
+        <th>Solution Applied</th>
+        <th>Level</th>
+        <th>Actions</th>
       </tr>
       </thead>
 
@@ -26,7 +30,11 @@
             <td><%= form.category %></td>
             <td><%= form.date_started %></td>
             <td><%= form.date_completed %></td>
-            <td><%= form.summary %></td>
+            <td><%= form.summary_of_problem %></td>
+            <td><%= form.impact %></td>
+            <td><%= form.applicable_to_other_areas %></td>
+            <td><%= form.solution_applied %></td>
+            <td><%= form.category_level %></td>
             <td>
               <%= link_to 'Edit', edit_form_path(form), class: 'btn btn-info btn-xs' %>
               <% if @current_user_role == AppConstants::ADMIN %>

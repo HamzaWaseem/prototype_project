@@ -9,7 +9,7 @@ class Devise::RegistrationsController < DeviseController
     @user = User.new(user_params)
     if @user.save
       @user.add_role(AppConstants::USER)
-      NotificationMailer.welcome('codegeek319@gmail.com', params[:user][:email]).deliver_now
+      # NotificationMailer.welcome('codegeek319@gmail.com', params[:user][:email]).deliver_now
       redirect_to users_path
     end
   end

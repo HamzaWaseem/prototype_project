@@ -35,7 +35,7 @@ class Ability
     cannot :read, User
     cannot :destroy, User
     can :read, Form
-    cannot :update, Form
+    can :update, Form
     cannot :create, Form
     cannot :destroy, Form
   end
@@ -45,7 +45,7 @@ class Ability
     cannot :read, User
     cannot :destroy, User
     can :read, Form
-    cannnot :update, Form
+    can :update, Form
     cannot :create, Form
     cannot :destroy, Form
   end

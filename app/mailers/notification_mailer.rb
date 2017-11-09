@@ -1,5 +1,5 @@
 class NotificationMailer < ApplicationMailer
-  default from: 'system@loudthinking.com'
+  default from: 'prototype-project.herokuapp.com'
 
   def welcome(admin,recipient)
     @recipient = recipient

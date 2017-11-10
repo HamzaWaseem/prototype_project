@@ -13,9 +13,9 @@ end
 
 
 user = User.new
-
-user.first_name            = 'Amdin'
-user.last_name             = 'Amdin'
+  
+user.first_name            = 'Admin'
+user.last_name             = ''
 user.email                 = 'admin@gmail.com'
 user.password              = '123456'
 user.password_confirmation = '123456'

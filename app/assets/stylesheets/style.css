@@ -23,6 +23,15 @@ table th {
 tr td {
     text-align: center!important;
 }
+.page-title {
+    padding: 0px;
+    letter-spacing: -1px;
+    display: block;
+    color: #666;
+    margin: 0 0 10px;
+    font-weight: 300;
+    font-family: 'Open Sans';
+}
 .spacing-bottom {
     margin-bottom: 30px;
 }

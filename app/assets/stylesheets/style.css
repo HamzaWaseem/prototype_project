@@ -1,10 +1,166 @@
 .navbar {
     border-radius: 0!important;
-    margin: inherit;
+    width: 100%!important;
+    /*margin: inherit;*/
 }
+
 .input-field {
     width: 250px!important;
 }
+
 span, label {
     margin-right: 10px;
 }
+
+table {
+    width: 100%!important;
+}
+
+table th {
+    text-align: center!important;
+}
+
+tr td {
+    text-align: center!important;
+}
+.spacing-bottom {
+    margin-bottom: 30px;
+}
+.tiles {
+    background-color: #bcbcbc;
+    color: #ffffff;
+    position: relative;
+}
+.tiles .tiles-body {
+    padding: 19px 18px 15px 24px;
+}
+.tiles.added-margin {
+    margin-right: -10px;
+}
+
+.tiles .heading {
+    font-size: 15px;
+    display: block;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    margin: 4px 0px;
+}
+
+.tiles.red {
+    background-color: #f35958;
+}
+
+.tiles.blue {
+    background-color: #0090d9;
+}
+
+.href-heading_size{
+    color: white !important;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+
+
+/*.dash_div {*/
+    /*width: 200px;*/
+    /*height: 150px;*/
+    /*margin-left: 10px;*/
+    /*background: #b92c28;*/
+    /*color: #fff;*/
+/*}*/
+/*.dash_div1 {*/
+    /*width: 200px;*/
+    /*height: 150px;*/
+    /*margin-left: 10px;*/
+    /*!*margin-top: 10px;*!*/
+    /*background: rosybrown;*/
+    /*color: #fff;*/
+/*}*/
+
+/*.data h2 {*/
+    /*padding-top: 12px;*/
+    /*padding-left: 25px;*/
+    /*font-size: 35px;*/
+    /*float: left;*/
+/*}*/
+
+/*.data h1 {*/
+    /*!*padding-top: 90px;*!*/
+    /*padding-left: 25px;*/
+    /*padding-right: 30px;*/
+    /*font-size: 35px;*/
+    /*float: right;*/
+/*}*/
+
+
+/*table {*/
+    /*width: 100%;*/
+    /*border-collapse: collapse;*/
+/*}*/
+/*!* Zebra striping *!*/
+/*tr:nth-of-type(odd) {*/
+    /*background: #eee;*/
+/*}*/
+/*th {*/
+    /*background: #333;*/
+    /*color: white;*/
+    /*font-weight: bold;*/
+/*}*/
+/*td, th {*/
+    /*padding: 6px;*/
+    /*border: 1px solid #ccc;*/
+    /*text-align: left;*/
+/*}*/
+
+/*@media*/
+/*only screen and (max-width: 760px),*/
+/*(min-device-width: 768px) and (max-device-width: 1024px)  {*/
+
+    /*!* Force table to not be like tables anymore *!*/
+    /*table, thead, tbody, th, td, tr {*/
+        /*display: block;*/
+    /*}*/
+
+    /*!* Hide table headers (but not display: none;, for accessibility) *!*/
+    /*thead tr {*/
+        /*position: absolute;*/
+        /*top: -9999px;*/
+        /*left: -9999px;*/
+    /*}*/
+
+    /*tr { border: 1px solid #ccc; }*/
+
+    /*td {*/
+        /*!* Behave  like a "row" *!*/
+        /*border: none;*/
+        /*border-bottom: 1px solid #eee;*/
+        /*position: relative;*/
+        /*padding-left: 50%;*/
+    /*}*/
+
+    /*td:before {*/
+        /*!* Now like a table header *!*/
+        /*position: absolute;*/
+        /*!* Top/left values mimic padding *!*/
+        /*top: 6px;*/
+        /*left: 6px;*/
+        /*width: 45%;*/
+        /*padding-right: 10px;*/
+        /*white-space: nowrap;*/
+    /*}*/
+
+    /*!**/
+    /*Label the data*/
+    /**!*/
+    /*td:nth-of-type(1):before { content: "First Name"; }*/
+    /*td:nth-of-type(2):before { content: "Last Name"; }*/
+    /*td:nth-of-type(3):before { content: "Job Title"; }*/
+    /*td:nth-of-type(4):before { content: "Favorite Color"; }*/
+    /*td:nth-of-type(5):before { content: "Wars of Trek?"; }*/
+    /*td:nth-of-type(6):before { content: "Porn Name"; }*/
+    /*td:nth-of-type(7):before { content: "Date of Birth"; }*/
+    /*td:nth-of-type(8):before { content: "Dream Vacation City"; }*/
+    /*td:nth-of-type(9):before { content: "GPA"; }*/
+    /*td:nth-of-type(10):before { content: "Arbitrary Data"; }*/
+/*}*/

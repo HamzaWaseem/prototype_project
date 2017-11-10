@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-roles_array=['Admin', 'Customer']
+roles_array=['Admin', 'Team Leader', 'Specialist', 'User']
 
 roles_array.each do |role|
   Role.create!(name: role)
@@ -13,7 +13,7 @@ end
 
 
 user = User.new
-  
+
 user.first_name            = 'Admin'
 user.last_name             = ''
 user.email                 = 'admin@gmail.com'

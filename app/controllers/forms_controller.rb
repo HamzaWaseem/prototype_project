@@ -1,12 +1,11 @@
 class FormsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_form, only: [:show, :edit, :update, :destroy]
 
+  load_and_authorize_resource
+
   def index
-    if @current_user_role == AppConstants::ADMIN
       @forms = Form.all
-    else
-      @forms = Form.where(user_id: current_user.id)
-    end
   end
 
   def show
@@ -20,6 +19,7 @@ class FormsController < ApplicationController
   end
 
   def create
+    # binding.pry
     @form = Form.new(form_params)
 
     respond_to do |format|
@@ -60,6 +60,6 @@ class FormsController < ApplicationController
     end
 
     def form_params
-      params.require(:form).permit(:department, :category, :date_started, :date_completed, :summary, :user_id)
+      params.require(:form).permit(:department, :category, :date_started, :date_completed,  :summary_of_problem, :impact, :applicable_to_other_areas, :user_id, :solution_applied, :category_level)
     end
 end

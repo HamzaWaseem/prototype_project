@@ -1,3 +1,6 @@
 $(document).ready(function () {
-    $('#example').dataTable();
+    $('#example').dataTable({
+        "scrollX": true,
+        responsive: true
+    });
 });

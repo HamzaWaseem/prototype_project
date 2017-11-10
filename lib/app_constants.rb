@@ -1,5 +1,6 @@
 module AppConstants
   ADMIN      = 'Admin'
-  APP_USER   = 'user'
-  CUSTOMER   = 'Customer'
+  TEAM_LEADER   = 'Team Leader'
+  SPECIALIST   = 'Specialist'
+  USER   = 'User'
 end

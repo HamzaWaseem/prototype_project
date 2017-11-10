@@ -19,7 +19,7 @@
           .left_col.scroll-view
             .navbar.nav_title{:style => "border: 0;"}
               = link_to root_path, class: 'site_title' do
-                %i.fa.fa-paw
+                %i.fa.fa-square-o
                 %span ProtoType
             .clearfix
             / menu profile quick info
@@ -37,15 +37,15 @@
             = render 'layouts/navigation'
 
             / /menu footer buttons
-            .sidebar-footer.hidden-small
-              -#%a{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Settings"}
-              -#  %span.glyphicon.glyphicon-cog{"aria-hidden" => "true"}
-              -#%a{"data-placement" => "top", "data-toggle" => "tooltip", :title => "FullScreen"}
-              -#  %span.glyphicon.glyphicon-fullscreen{"aria-hidden" => "true"}
-              -#%a{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Lock"}
-              -#  %span.glyphicon.glyphicon-eye-close{"aria-hidden" => "true"}
-              = link_to destroy_user_session_path, :method=>'delete', "data-placement" => "top", "data-toggle" => "tooltip", :title => "Logout" do
-                %span.glyphicon.glyphicon-off{"aria-hidden" => "true"}
+            -#.sidebar-footer.hidden-small
+            -#  -#%a{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Settings"}
+            -#  -#  %span.glyphicon.glyphicon-cog{"aria-hidden" => "true"}
+            -#  -#%a{"data-placement" => "top", "data-toggle" => "tooltip", :title => "FullScreen"}
+            -#  -#  %span.glyphicon.glyphicon-fullscreen{"aria-hidden" => "true"}
+            -#  -#%a{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Lock"}
+            -#  -#  %span.glyphicon.glyphicon-eye-close{"aria-hidden" => "true"}
+            -#  = link_to destroy_user_session_path, :method=>'delete', "data-placement" => "top", "data-toggle" => "tooltip", :title => "Logout" do
+            -#    %span.glyphicon.glyphicon-off{"aria-hidden" => "true"}
             / /menu footer buttons
         / top navigation
         .top_nav

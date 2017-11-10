@@ -19,6 +19,8 @@
         <th>Applicable to Other Areas</th>
         <th>Solution Applied</th>
         <th>Level</th>
+        <th>Created By</th>
+        <th>Updated By</th>
         <th>Actions</th>
       </tr>
       </thead>
@@ -35,9 +37,12 @@
             <td><%= form.applicable_to_other_areas %></td>
             <td><%= form.solution_applied %></td>
             <td><%= form.category_level %></td>
+            <td><% id =form.user_id %><% @user = User.find_by_id( id ) %><%= @user.first_name %></td>
+            <!--<td><% id =form.updated_by %><% @user = User.find_by_id( id ) %><%#= @user.first_name %></td>-->
+            <td><%= form.updated_by %></td>
             <td>
               <%= link_to 'Edit', edit_form_path(form), class: 'btn btn-info btn-xs' %>
-              <% if @current_user_role == AppConstants::ADMIN %>
+              <% if @current_user_role == AppConstants::ADMIN || @current_user_role == AppConstants::TEAM_LEADER%>
                 <%= link_to 'Destroy', form, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' %>
               <% end %>
             </td>

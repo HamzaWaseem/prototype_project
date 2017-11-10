@@ -46,6 +46,8 @@ gem 'actionmailer'
 
 gem 'pg'
 
+# gem 'public_activity'
+
 gem 'puma', '~> 3.0'
 
 gem 'rack-cors', require: 'rack/cors'

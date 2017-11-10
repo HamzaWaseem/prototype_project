@@ -7,19 +7,8 @@
     <div id="container">
           <div class="row 2col">
             <%= render 'forms_block', block_color: 'blue', title: 'Forms', title_1: 'Tot. forms', count_1: @forms_count %>
-            <%= render 'users_block1', block_color: 'red', title: 'Users', title_1: 'Tot. users', count_1: @users_count %>
+            <%= render 'users_block', block_color: 'red', title: 'Users', title_1: 'Tot. users', count_1: @users_count %>
           </div>
-    </div>
-    <div class="page-title">
-      <h3>Category</h3>
-    </div>
-    <div id="container">
-      <div class="row 2col">
-        <%= render 'report_block', block_color: 'blue', title: 'Forms', title_1: 'Tot. forms', count_1: @forms_count %>
-        <%= render 'report_block1', block_color: 'red', title: 'Users', title_1: 'Tot. users', count_1: @users_count %>
-        <%= render 'report_block1', block_color: 'blue', title: 'Users', title_1: 'Tot. users', count_1: @users_count %>
-        <%= render 'report_block1', block_color: 'red', title: 'Users', title_1: 'Tot. users', count_1: @users_count %>
-      </div>
     </div>
   </div>
 </div>

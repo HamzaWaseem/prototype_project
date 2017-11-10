@@ -4,6 +4,7 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.selected_class = 'active'
     if @current_user_role == AppConstants::ADMIN
       primary.item :dashboards, content_tag(:i, "", :class => "fa fa-tachometer") + "Dashboard", dashboards_path, :highlights_on => /\/dashboard/
+      primary.item :notifications, content_tag(:i, "", :class => "fa fa-bell") + "Notifications", notifications_path, :highlights_on => /\/notifications/
       primary.item :users, content_tag(:i, "", :class => "fa fa-users") + "Users", users_path, :highlights_on => /\/users/
       primary.item :forms, content_tag(:i, "", :class => "fa fa-wpforms") + "Forms", forms_path, :highlights_on => /\/forms/
 

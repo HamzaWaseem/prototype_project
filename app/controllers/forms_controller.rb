@@ -60,6 +60,6 @@ class FormsController < ApplicationController
     end
 
     def form_params
-      params.require(:form).permit(:department, :category, :date_started, :date_completed,  :summary_of_problem, :impact, :applicable_to_other_areas, :user_id, :solution_applied, :category_level)
+      params.require(:form).permit(:department, :category, :date_started, :date_completed,  :summary_of_problem, :impact, :applicable_to_other_areas, :user_id, :solution_applied, :category_level,:updated_by,:completed_by,:is_complete)
     end
 end

@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+
+  # include PublicActivity::Model
+  # tracked
+
   rolify
   # attr_accessible :role_ids
   # Include default devise modules. Others available are:
@@ -6,6 +10,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :forms
+  has_one :notification
   validates :email, presence: true
 
 

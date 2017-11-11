@@ -27,6 +27,11 @@
     </p>
 
     <p>
+      <strong>Level:</strong>
+      <%= @form.category_level %>
+    </p>
+
+    <p>
       <strong>Summary of Problem:</strong>
       <%= @form.summary_of_problem %>
     </p>
@@ -46,12 +51,7 @@
       <%= @form.solution_applied %>
     </p>
 
-    <p>
-      <strong>Level:</strong>
-      <%= @form.category_level %>
-    </p>
-
-
   </div>
 </div>
+<%= link_to 'Back', forms_path , class: 'btn btn-primary pull-left' %>
 

@@ -11,8 +11,13 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :forms
   has_one :notification
-  validates :email, presence: true
-
+  validates :first_name, presence: true, format: { with: //, message: "Can't be blank" }
+  validates :last_name, presence: true, format: { with: //, message: "Can't be blank" }
+  validates :phone, presence: true, format: { with: //, message: "Can't be blank" }
+  validates :email, presence: true, format: { with: //, message: "Can't be blank" }
+  validates :password, presence: true, format: { with: //, message: "Can't be blank" }
+  validates :password_confirmation, presence: true, format: { with: //, message: "Can't be blank" }
+  validates :username, presence: true, format: { with: //, message: "Can't be blank" }
 
   def full_name
     "#{self.first_name} #{self.last_name}"

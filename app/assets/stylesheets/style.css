@@ -28,9 +28,9 @@ tr td {
     letter-spacing: -1px;
     display: block;
     color: #666;
-    margin: 0 0 10px;
     font-weight: 300;
     font-family: 'Open Sans';
+    margin-bottom: -35px;
 }
 .spacing-bottom {
     margin-bottom: 30px;
@@ -47,12 +47,12 @@ tr td {
     margin-right: -10px;
 }
 
-.tiles .heading {
+.tiles.heading {
     font-size: 15px;
     display: block;
     font-family: 'Open Sans';
     font-weight: 600;
-    margin: 4px 0px;
+    margin-bottom: 10px;
 }
 
 .tiles.red {
@@ -61,6 +61,12 @@ tr td {
 
 .tiles.blue {
     background-color: #0090d9;
+}
+.tiles.green {
+    background-color: #d98c00;
+}
+.tiles.purple {
+    background-color: #af00d9;
 }
 
 .href-heading_size{

@@ -54,6 +54,34 @@ class FormsController < ApplicationController
     end
   end
 
+  def critical_forms
+    @forms = Form.where(category_level: AppConstants::CRITICAL)
+  end
+
+  def high_forms
+    @forms = Form.where(category_level: AppConstants::HIGH)
+  end
+
+  def medium_forms
+    @forms = Form.where(category_level: AppConstants::MEDIUM)
+  end
+
+  def low_forms
+    @forms = Form.where(category_level: AppConstants::LOW)
+  end
+
+  def department_a_forms
+    @forms = Form.where(department: AppConstants::DEPARTMENT_A)
+  end
+
+  def department_b_forms
+    @forms = Form.where(department: AppConstants::DEPARTMENT_B)
+  end
+
+  def department_c_forms
+    @forms = Form.where(department: AppConstants::DEPARTMENT_C)
+  end
+
   private
     def set_form
       @form = Form.find(params[:id])

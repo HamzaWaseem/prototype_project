@@ -20,7 +20,7 @@ class UsersController < ApplicationController
         role = user.roles.last.name
         user.remove_role role
         user.add_role(params[:user][:roles_name])
-        redirect_to forms_path
+        redirect_to dashboards_path
       end
   end
 

@@ -8,11 +8,7 @@ class ApplicationController < ActionController::Base
 
 
   def after_sign_in_path_for(resource_or_scope)
-    if @current_user_role == AppConstants::ADMIN
       dashboards_path
-    else
-      forms_path
-    end
   end
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up) do |user_params|

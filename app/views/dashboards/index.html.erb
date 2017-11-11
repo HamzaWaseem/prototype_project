@@ -28,24 +28,24 @@
     <% if @current_user_role == AppConstants::ADMIN %>
       <div id="container">
         <div class="row 2col">
-          <%= render 'department_a_block', block_color: 'blue', title: 'Department A', title_1: 'Tot. department forms', count_1: @critical_forms_count %>
-          <%= render 'department_b_block', block_color: 'red', title: 'Department B', title_1: 'Tot. department forms', count_1: @high_forms_count %>
-          <%= render 'department_c_block', block_color: 'green', title: 'Department C', title_1: 'Tot. department forms', count_1: @medium_forms_count %>
+          <%= render 'department_a_block', block_color: 'blue', title: 'Department A', title_1: 'Tot. department forms', count_1: @department_a_count %>
+          <%= render 'department_b_block', block_color: 'red', title: 'Department B', title_1: 'Tot. department forms', count_1: @department_b_count %>
+          <%= render 'department_c_block', block_color: 'green', title: 'Department C', title_1: 'Tot. department forms', count_1: @department_c_count %>
         </div>
       </div>
     <% end %>
     <% if @current_user_role == AppConstants::TEAM_LEADER %>
       <div id="container">
         <div class="row 2col">
-          <%= render 'department_a_block', block_color: 'blue', title: 'Department A', title_1: 'Tot. department forms', count_1: @critical_forms_count %>
-          <%= render 'department_b_block', block_color: 'red', title: 'Department B', title_1: 'Tot. department forms', count_1: @high_forms_count %>
+          <%= render 'department_a_block', block_color: 'blue', title: 'Department A', title_1: 'Tot. department forms', count_1: @department_a_count %>
+          <%= render 'department_b_block', block_color: 'red', title: 'Department B', title_1: 'Tot. department forms', count_1: @department_b_count %>
         </div>
       </div>
     <% end %>
     <% if @current_user_role == AppConstants::USER || @current_user_role == AppConstants::SPECIALIST %>
       <div id="container">
         <div class="row 2col">
-          <%= render 'department_a_block', block_color: 'blue', title: 'Department A', title_1: 'Tot. department forms', count_1: @critical_forms_count %>
+          <%= render 'department_a_block', block_color: 'blue', title: 'Department A', title_1: 'Tot. department forms', count_1: @department_a_count %>
         </div>
       </div>
     <% end %>

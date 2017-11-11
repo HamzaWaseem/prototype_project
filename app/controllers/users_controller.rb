@@ -22,6 +22,7 @@ class UsersController < ApplicationController
         user.add_role(params[:user][:roles_name])
         redirect_to dashboards_path
       end
+    
   end
 
   def destroy

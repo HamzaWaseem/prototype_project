@@ -5,21 +5,22 @@
   </div>
   <div class="x_content">
     <%= simple_form_for(@form) do |f| %>
-        <%= f.error_notification %>
 
         <div class="form-inputs container">
           <div class="col-lg-6 col-md-12 col-sm-12">
-            <%= f.input :department, :input_html => { :class => 'input-field' } %>
+            <%= f.input :department,collection: [['Department A', 'Department A'] ,['Department B', 'Department B'], ['Department C', 'Department C']], prompt: "Select Department", :input_html => { :class => 'input-field' } %>
             <%= f.collection_radio_buttons :category, [['Lead', 'Lead'] ,['Non-Lead', 'Non-Lead']],:first, :last %>
             <%= f.input :date_started, :input_html => { :class => 'datepicker input-field' } %>
-            <%#= f.input :date_completed, :input_html => { :class => 'datepicker input-field' } %>
+            <%= f.input :date_completed, :input_html => { :class => 'datepicker input-field' } %>
             <%= f.input :category_level,collection: [['Critical', 'Critical'] ,['High', 'High'], ['Medium', 'Medium'], ['Low', 'Low']], prompt: "Select Category", :input_html => { :class => 'input-field' } %>
           </div>
+
           <div class="col-lg-6 col-md-12 col-sm-12">
             <%= f.input :summary_of_problem, :input_html => { :class => 'input-field' } %>
             <%= f.input :impact, :input_html => { :class => 'input-field' } %>
             <%= f.input :applicable_to_other_areas, :input_html => { :class => 'input-field' } %>
             <%= f.input :solution_applied, :input_html => { :class => 'input-field' } %>
+            <%= f.input :user_id,:as => :hidden, :input_html => { :class => 'input-field', :value => current_user.id } %>
             <%= f.input :updated_by,:as => :hidden, :input_html => { :class => 'input-field', :value => current_user.id } %>
           </div >
         </div>

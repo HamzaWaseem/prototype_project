@@ -75,6 +75,10 @@ tr td {
     font-weight: 900;
 }
 
+.alert-danger, .alert-error {
+    color: rgba(119, 10, 0, 0.88) !important;
+}
+
 
 
 /*.dash_div {*/

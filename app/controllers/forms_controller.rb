@@ -21,36 +21,34 @@ class FormsController < ApplicationController
   def create
     # binding.pry
     @form = Form.new(form_params)
-
-    respond_to do |format|
-      if @form.save
-        format.html { redirect_to @form, notice: 'Form was successfully created.' }
-        format.json { render :show, status: :created, location: @form }
-      else
-        format.html { render :new }
-        format.json { render json: @form.errors, status: :unprocessable_entity }
+    if @form.valid?
+      respond_to do |format|
+        if @form.save
+          format.html { redirect_to @form, notice: 'Form was successfully created.' }
+        else
+          format.html { render :new }
+        end
       end
+    else
+      render :new
     end
   end
 
   def update
     # binding.pry
     respond_to do |format|
-      if @form.update(form_params)
-        format.html { redirect_to @form, notice: 'Form was successfully updated.' }
-        format.json { render :show, status: :ok, location: @form }
-      else
-        format.html { render :edit }
-        format.json { render json: @form.errors, status: :unprocessable_entity }
+        if @form.update(form_params)
+          format.html { redirect_to @form, notice: 'Form was successfully updated.' }
+        else
+          format.html { render :edit }
+        end
       end
-    end
   end
 
   def destroy
     @form.destroy
     respond_to do |format|
       format.html { redirect_to forms_url, notice: 'Form was successfully destroyed.' }
-      format.json { head :no_content }
     end
   end
 

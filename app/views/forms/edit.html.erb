@@ -20,7 +20,7 @@
             <%= f.input :impact, :input_html => { :class => 'input-field' } %>
             <%= f.input :applicable_to_other_areas, :input_html => { :class => 'input-field' } %>
             <%= f.input :solution_applied, :input_html => { :class => 'input-field' } %>
-            <%= f.input :user_id,:as => :hidden, :input_html => { :class => 'input-field', :value => current_user.id } %>
+            <%= f.input :user_id,:as => :hidden, :input_html => { :class => 'input-field' } %>
             <%= f.input :updated_by,:as => :hidden, :input_html => { :class => 'input-field', :value => current_user.id } %>
           </div >
         </div>

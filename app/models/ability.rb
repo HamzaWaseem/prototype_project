@@ -34,20 +34,14 @@ class Ability
     can :update, User, id: user.id
     cannot :read, User
     cannot :destroy, User
-    can :read, Form
-    can :update, Form
-    cannot :create, Form
-    cannot :destroy, Form
+    can :manage, Form
   end
   
   def all_users(user)
     can :update, User, id: user.id
     cannot :read, User
     cannot :destroy, User
-    can :read, Form
-    can :update, Form
-    cannot :create, Form
-    cannot :destroy, Form
+    can :manage, Form
   end
   
 end
